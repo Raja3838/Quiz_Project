@@ -13,8 +13,8 @@ jobs:
 
     steps:
       - name: Pull Docker Image
-        run: sudo docker pull ratankotipalli/bikeshare-fastapi:latest
+        run: sudo docker pull ratankotipalli/sentiment_analysis_model-fastapi:latest
       - name: Delete Old Docker Container
-        run: sudo docker rm -f bikeshare-fastapi-container || true
+        run: sudo docker rm -f sentiment_analysis_model-fastapi-container || true
       - name: Run Docker Container
-        run: sudo docker run -d -p 8080:8001 --name bikeshare-fastapi-container ratankotipalli/bikeshare-fastapi
+        run: sudo docker run -d -p 8080:8001 --name sentiment_analysis_model-fastapi-container ratankotipalli/sentiment_analysis_model-fastapi
